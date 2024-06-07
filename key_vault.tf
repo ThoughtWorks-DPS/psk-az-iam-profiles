@@ -1,12 +1,3 @@
-provider "azurerm" {
-  features {
-    key_vault {
-      purge_soft_delete_on_destroy    = true
-      recover_soft_deleted_key_vaults = true
-    }
-  }
-}
-
 resource "azurerm_key_vault" "example" {
   name                        = "psk-dev-common-eus2-kv"
   location                    = azurerm_resource_group.psk-shared-rg.location
