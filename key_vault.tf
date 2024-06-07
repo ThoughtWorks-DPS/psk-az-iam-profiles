@@ -7,8 +7,6 @@ provider "azurerm" {
   }
 }
 
-data "azurerm_client_config" "current" {}
-
 resource "azurerm_key_vault" "example" {
   name                        = "psk-dev-common-eus2-kv"
   location                    = azurerm_resource_group.psk-shared-rg.location
