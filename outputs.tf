@@ -5,5 +5,5 @@ output "rg_name" {
 
 output "rg_location" {
   value       = azurerm_resource_group.psk-shared-rg.location
-  description = "Resource Group location"
+  description = "Resource Group location."
 }
