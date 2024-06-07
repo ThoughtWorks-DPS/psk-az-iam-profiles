@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 3.0.0"
+  required_version = ">=1.8.5"
   #backend "remote" {}
   required_providers {
     azurerm = {
