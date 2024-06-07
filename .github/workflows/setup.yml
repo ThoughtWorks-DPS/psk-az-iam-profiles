@@ -6,9 +6,6 @@ name: Setup Environment
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ env.tf_actions_working_dir }}
     env:
       ARM_TENANT_ID: ${{ secrets.AZ_TENANT_ID }}
       ARM_SUBSCRIPTION_ID: ${{ secrets.AZ_SUBSCRIPTION_ID }}
@@ -19,6 +16,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: "3.106.1"
